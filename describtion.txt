@@ -1,5 +1,75 @@
-Hello World
+                                            Git Commands
+_____________________________________________________________________________________________________
+Working Directory               Staging Area            Local Repository            Remote Repository
+        |                             |                         |                           |
+        |           git add           |                         |                           |
+        |---------------------------->|                         |                           |                
+        |                             |        git commit       |                           |
+        |                             |------------------------>|                           |
+        |                      git add -am                      |                           |
+        |------------------------------------------------------>|                           |                  
+        |                             |                         |          git push         |
+        |                             |                         |-------------------------->|                        
+        |                             |                         |          git pull         |
+        |                             |                         |<--------------------------|       
+        |                             |                         |          git fetch        |
+        |                             |                         |<- - - - - - - - - - - - - |
+________|_____________________________|_________________________|___________________________|________
 
-How are you my friend?
+Setting path
+___________________________
+git cd Documents
+git cd Repository1
+git status
 
-Good thanks, and you?
+Creating Repository
+___________________________
+git init
+
+Adding files
+___________________________
+git add <FileName>
+git add --all
+git add *.txt / *.js / pr*.js / ...
+git add .
+
+
+Commiting files
+___________________________
+git commit -m "<commitDescribtion>"
+git commit -am "<commitDescribtion>" (skip Staging Area: Working Directory --> Local Depository) doesn't apply to new files
+
+Resseting
+___________________________
+git reset
+
+Setting Remote Repository
+___________________________
+git remote add origin master <https://github.com/MartinVII/Repository1.git>
+
+
+Uploading files
+___________________________
+git push origin master
+git push -u origin master (remembers https, then only -> git push (without origin master.....))
+
+Downloading files
+__________________________
+git pull origin master
+
+
+                                        Git File States
+________________________________________________________________________________________________
+    Untracked                     Unmodified                 Modified                     Staged
+        |                             |                         |                           |
+ Create |                             |                         |                           |
+------->|                             |                         |                           |                
+        |                             |         Add file        |                           |
+        |---------------------------------------------------------------------------------->|
+        |                             |         Edit file       |                           |
+        |                             |------------------------>|                           |                  
+        |                             |                         |         Stage file        |
+        |                             |                         |-------------------------->|                        
+        |                             |                   Commit file                       |
+        |                             |<----------------------------------------------------|       
+________|_____________________________|_________________________|___________________________|___
